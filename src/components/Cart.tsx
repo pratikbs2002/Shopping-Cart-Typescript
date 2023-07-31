@@ -61,16 +61,31 @@ export default function Cart() {
           >
             {cartItems.map((item, key) => (
               <div
-                key={key}
                 style={{
-                  width: "250px",
-                  padding: "10px",
-                  borderRadius: "10px",
-                  border: "2px solid black",
-                  textAlign: "center",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  gap: "10px",
                 }}
+                key={key}
               >
-                {item.id} : {item.quantity}
+                <div
+                  style={{
+                    width: "200px",
+                    padding: "10px",
+                    borderRadius: "10px",
+                    border: "2px solid black",
+                    textAlign: "center",
+                  }}
+                >
+                  {item.id} : {item.quantity}
+                </div>
+                <div
+                  style={{ cursor: "pointer" }}
+                  onClick={() => removeFromCart(item.id)}
+                >
+                  ❌
+                </div>
               </div>
             ))}
           </div>
