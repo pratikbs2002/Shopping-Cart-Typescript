@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Book",
+        "price": 11000,
+        "image": "/public/vite.svg"
+    },
+    {
+        "id": 2,
+        "name": "Book",
+        "price": 12000,
+        "image": "/public/vite.svg"
+    },
+    {
+        "id": 3,
+        "name": "Book",
+        "price": 13000,
+        "image": "/public/vite.svg"
+    }
+]
