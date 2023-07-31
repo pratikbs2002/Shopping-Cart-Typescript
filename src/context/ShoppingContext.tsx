@@ -14,10 +14,12 @@ type ShoppingCartContext = {
   increaseCartQuantity: (id: number) => void;
   decreaseCartQuantity: (id: number) => void;
   removeFromCart: (id: number) => void;
+  clearCart: () => void;
   cartItems: CartItem[];
   cartQuantity: number;
   openCart: () => void;
   closeCart: () => void;
+  isOpen: boolean;
 };
 
 const ShoppingContext = createContext({} as ShoppingCartContext);
@@ -79,6 +81,9 @@ export function ShoppingContextProvider({
     });
   }
 
+  function clearCart(): void {
+    setCartItems([]);
+  }
   const openCart = () => setIsOpen(true);
   const closeCart = () => setIsOpen(false);
 
@@ -87,10 +92,12 @@ export function ShoppingContextProvider({
     increaseCartQuantity,
     decreaseCartQuantity,
     removeFromCart,
+    clearCart,
     cartItems,
     cartQuantity,
     openCart,
     closeCart,
+    isOpen,
   };
 
   return (
