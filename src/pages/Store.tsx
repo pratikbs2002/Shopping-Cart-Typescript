@@ -18,6 +18,7 @@ export default function Store() {
           flexWrap: "wrap",
           gap: "100px",
           width: "100%",
+          marginTop: "100px"
         }}
       >
         {storeItems.map((item) => (
